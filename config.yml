@@ -3,19 +3,43 @@ validation: sovereign
 accounts: 
 - name: alice
   coins:
-  - 20000token
+  - 1000smartTM
   - 200000000stake
 - name: bob
   coins:
-  - 10000token
+  - 10000smartTM
   - 100000000stake
+- name: user1
+  coins:
+  - 10000smartTM
+- name: user2
+  coins:
+  - 10000smartTM
+- name: user3
+  coins:
+  - 10000smartTM
+- name: user4
+  coins:
+  - 10000smartTM
+- name: user5
+  coins:
+  - 10000smartTM
+- name: user6
+  coins:
+  - 10000smartTM
+- name: user7
+  coins:
+  - 10000smartTM
+- name: user8
+  coins:
+  - 10000smartTM
 client:
   openapi:
     path: docs/static/openapi.yml
 faucet:
   name: bob
   coins:
-  - 5token
+  - 5smartTM
   - 100000stake
 validators:
 - name: alice

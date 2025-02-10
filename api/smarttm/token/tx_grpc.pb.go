@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: smarttm/smarttm/tx.proto
+// source: smarttm/token/tx.proto
 
-package smarttm
+package token
 
 import (
 	context "context"
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Msg_UpdateParams_FullMethodName = "/smarttm.smarttm.Msg/UpdateParams"
+	Msg_UpdateParams_FullMethodName = "/smarttm.token.Msg/UpdateParams"
 )
 
 // MsgClient is the client API for Msg service.
@@ -100,7 +100,7 @@ func _Msg_UpdateParams_Handler(srv interface{}, ctx context.Context, dec func(in
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Msg_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "smarttm.smarttm.Msg",
+	ServiceName: "smarttm.token.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -109,5 +109,5 @@ var Msg_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "smarttm/smarttm/tx.proto",
+	Metadata: "smarttm/token/tx.proto",
 }

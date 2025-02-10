@@ -54,8 +54,11 @@ import (
 	"google.golang.org/protobuf/types/known/durationpb"
 
 	smarttmmodulev1 "smarttm/api/smarttm/smarttm/module"
+	tokenmodulev1 "smarttm/api/smarttm/token/module"
 	_ "smarttm/x/smarttm/module" // import for side-effects
 	smarttmmoduletypes "smarttm/x/smarttm/types"
+	_ "smarttm/x/token/module" // import for side-effects
+	tokenmoduletypes "smarttm/x/token/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 )
 
@@ -94,6 +97,7 @@ var (
 		circuittypes.ModuleName,
 		// chain modules
 		smarttmmoduletypes.ModuleName,
+		tokenmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	}
 
@@ -119,6 +123,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		smarttmmoduletypes.ModuleName,
+		tokenmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/beginBlockers
 	}
 
@@ -138,6 +143,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		smarttmmoduletypes.ModuleName,
+		tokenmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/endBlockers
 	}
 
@@ -296,6 +302,10 @@ var (
 			{
 				Name:   smarttmmoduletypes.ModuleName,
 				Config: appconfig.WrapAny(&smarttmmodulev1.Module{}),
+			},
+			{
+				Name:   tokenmoduletypes.ModuleName,
+				Config: appconfig.WrapAny(&tokenmodulev1.Module{}),
 			},
 			// this line is used by starport scaffolding # stargate/app/moduleConfig
 		},

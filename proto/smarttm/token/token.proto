@@ -1,0 +1,10 @@
+syntax = "proto3";
+package smarttm.token;
+
+option go_package = "smarttm/x/token/types";
+
+message Token {
+  
+  string denom = 1; 
+  uint64 totalSupply = 2; 
+}

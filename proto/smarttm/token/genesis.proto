@@ -1,0 +1,17 @@
+syntax = "proto3";
+package smarttm.token;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "smarttm/token/params.proto";
+
+option go_package = "smarttm/x/token/types";
+
+// GenesisState defines the token module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
